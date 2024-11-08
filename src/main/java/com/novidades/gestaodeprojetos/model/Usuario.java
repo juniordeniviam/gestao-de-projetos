@@ -19,7 +19,9 @@ import lombok.Setter;
 @Setter
 @SequenceGenerator(name = "generator_usuario", sequenceName = "generator_usuario", initialValue = 1, allocationSize = 1)
 public class Usuario implements UserDetails{
-	
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
